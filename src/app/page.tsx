@@ -11,6 +11,7 @@ import { ValidationStatus } from '@/components/editor/ValidationStatus';
 import { ResultDisplay } from '@/components/editor/ResultDisplay';
 import { ExamplePicker } from '@/components/examples/ExamplePicker';
 import { DataGenerator } from '@/components/generator/DataGenerator';
+import { ResizablePanel } from '@/components/ui/resizable-panel';
 import { RuleBuilder } from '@/components/builder/RuleBuilder';
 import { MultiRuleViewer } from '@/components/visualization/MultiRuleViewer';
 import { validateJson, validateJsonLogic, validateMultiRuleJsonLogic, MultiRuleValidationResult } from '@/lib/jsonlogic/validator';
@@ -257,18 +258,30 @@ export default function Home() {
       <div className="flex flex-1 overflow-hidden">
         {/* Left Sidebar - Examples/Generator */}
         {(showExamples || showGenerator) && (
-          <div className="w-72 border-r flex flex-col">
+          <ResizablePanel
+            defaultWidth={288}
+            minWidth={200}
+            maxWidth={500}
+            side="right"
+            className="border-r flex flex-col"
+          >
             {showExamples && (
               <ExamplePicker onSelect={handleExampleSelect} className="flex-1" />
             )}
             {showGenerator && !showExamples && (
               <DataGenerator rule={parsedValue as JsonLogicRule} onSelectData={handleDataSelect} className="flex-1" />
             )}
-          </div>
+          </ResizablePanel>
         )}
 
         {/* Editor Panel */}
-        <div className="flex flex-col w-[400px] min-w-[300px] border-r">
+        <ResizablePanel
+          defaultWidth={400}
+          minWidth={300}
+          maxWidth={700}
+          side="right"
+          className="flex flex-col border-r"
+        >
           {/* Rule Editor */}
           <div className="flex-1 flex flex-col min-h-0">
             <div className="flex items-center justify-between px-3 py-2 border-b">
@@ -306,7 +319,7 @@ export default function Home() {
           <div className="border-t p-3">
             <ResultDisplay result={result} error={evalError} duration={evalDuration} />
           </div>
-        </div>
+        </ResizablePanel>
 
         {/* Visualization Panel */}
         <div className="flex-1 flex flex-col min-w-0">
