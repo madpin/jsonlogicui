@@ -7,6 +7,48 @@ A modern, interactive web application for building, testing, and visualizing [JS
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
+## Screenshots
+
+### Tree Visualization with Node Details
+Interactive tree view showing JSONLogic rules with expandable nodes and detailed information panels.
+
+![Tree Node Details](./public/screenshots/tree-node-details.png)
+
+### Tree Visualization
+Hierarchical tree view of complex shipping cost calculation rules.
+
+![Tree Visualization](./public/screenshots/tree-visualization.jpeg)
+
+### Mermaid Diagram Export
+Convert JSONLogic rules to Mermaid flowcharts for documentation.
+
+![Mermaid Diagram](./public/screenshots/mermaid-diagram.jpeg)
+
+### Diagram View
+Graph-based visualization showing rule structure with AND/OR logic gates.
+
+![Diagram View](./public/screenshots/diagram-view.jpeg)
+
+### Human Readable View
+Natural language representation of JSONLogic rules for easier understanding.
+
+![Readable View](./public/screenshots/readable-view.jpeg)
+
+### Rule Builder with Operators
+Visual rule builder with categorized operator palette.
+
+![Builder Operators](./public/screenshots/builder-operators.jpeg)
+
+### Examples Library
+Browse and select from pre-built JSONLogic examples organized by category.
+
+![Builder Examples](./public/screenshots/builder-examples.jpeg)
+
+### Code Editor with Validation
+Monaco-based editor with syntax highlighting, comments support, and real-time validation.
+
+![Editor Validation](./public/screenshots/editor-validation.png)
+
 ## Features
 
 ### 🎨 Rich Code Editor
